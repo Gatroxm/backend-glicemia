@@ -8,12 +8,14 @@ interface GlicemiaData {
 
 const getEstado = (valor: number): { estado: string; color: string } => {
   if (valor < 70) {
-    return { estado: "BAJA", color: "FF0000" };
+  return { estado: "BAJA", color: "FFFF0000" };
   }
+
   if (valor > 140) {
-    return { estado: "ALTA", color: "FF0000" };
+    return { estado: "ALTA", color: "FFFF0000" };
   }
-  return { estado: "NORMAL", color: "00FF00" };
+
+  return { estado: "NORMAL", color: "FF00FF00" };
 };
 
 export const generateExcelBuffer = async (

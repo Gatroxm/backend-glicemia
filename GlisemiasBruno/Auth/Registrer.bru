@@ -5,12 +5,12 @@ meta {
 }
 
 post {
-  url: {{urlGluclometria}}auth/register?Authorization={{tokenAdmin}}
+  url: {{urlGluclometria}}auth/register
   body: json
   auth: none
 }
 
-query {
+headers {
   Authorization: {{tokenAdmin}}
 }
 
