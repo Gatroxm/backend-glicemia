@@ -1,0 +1,15 @@
+meta {
+  name: Obtener Glucometrias por usuario
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{urlGluclometria}}glicemias
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{token}}
+}

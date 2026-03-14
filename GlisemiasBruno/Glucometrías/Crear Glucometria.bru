@@ -1,0 +1,23 @@
+meta {
+  name: Crear Glucometria
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{urlGluclometria}}glicemias
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{token}}
+}
+
+body:json {
+  {
+    "valor": 140,
+    "tipo": "Antes De Almuerzo",
+    "hora": "06:00 AM"
+  }
+}

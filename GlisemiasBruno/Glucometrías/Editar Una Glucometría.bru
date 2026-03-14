@@ -1,0 +1,23 @@
+meta {
+  name: Editar Una Glucometría
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{urlGluclometria}}glicemias/69b5e7e719ffbca83d1e096e
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{token}}
+}
+
+body:json {
+  {
+    "valor": 120,
+    "tipo": "ayunas",
+    "hora": "06:00 AM"
+  }
+}

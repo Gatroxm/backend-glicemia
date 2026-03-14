@@ -1,0 +1,23 @@
+meta {
+  name: Registrer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{urlGluclometria}}auth/register?Authorization={{tokenAdmin}}
+  body: json
+  auth: none
+}
+
+query {
+  Authorization: {{tokenAdmin}}
+}
+
+body:json {
+  {
+    "email": "tavoxpau@gmail.com",
+    "password": "Gustavo12345*",
+    "name": "Gustavo Adolfo Muñoz Reyes"
+  }
+}

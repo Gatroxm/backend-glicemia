@@ -1,0 +1,19 @@
+{
+  "name": "routes-generator",
+  "description": "Generates an Express routes file with CRUD endpoints following project conventions",
+  "version": "1.0.0",
+  "runtime": "node",
+  "entry": "prompt.md",
+  "requires": [
+    "AGENTS.md",
+    "ai/context/project.context.md",
+    "ai/context/backend.context.md",
+    "ai/rules/backend.rules.md"
+  ],
+  "output": {
+    "path": "src/modules/{moduleName}",
+    "files": [
+      "{moduleName}.routes.ts"
+    ]
+  }
+}

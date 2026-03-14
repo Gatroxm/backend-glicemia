@@ -1,0 +1,21 @@
+{
+  "name": "module-generator",
+  "description": "Generates a complete module with model, controller, and routes following project conventions",
+  "version": "1.0.0",
+  "runtime": "node",
+  "entry": "prompt.md",
+  "requires": [
+    "AGENTS.md",
+    "ai/context/project.context.md",
+    "ai/context/backend.context.md",
+    "ai/rules/backend.rules.md"
+  ],
+  "output": {
+    "path": "src/modules/{moduleName}",
+    "files": [
+      "{moduleName}.model.ts",
+      "{moduleName}.controller.ts",
+      "{moduleName}.routes.ts"
+    ]
+  }
+}
