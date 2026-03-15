@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: reportes/glicemias/excel
+  url: {{urlGluclometria}}reportes/glicemias/excel
   body: none
   auth: none
+}
+
+headers {
+  Authorization: {{tokenAdmin}}
 }
