@@ -1,5 +1,5 @@
 import { Router } from "express";
-import auth from "../../middleware/auth.middleware";
+import auth from "../../middleware/auth.middleware"; // Asegura si exportas default o nombrado
 
 import {
   create,
@@ -11,10 +11,12 @@ import {
 
 const router = Router();
 
-router.post("/", auth, create);
-router.get("/", auth, list);
-router.get("/:id", auth, getOne);
-router.put("/:id", auth, update);
-router.delete("/:id", auth, remove);
+router.use(auth);
+
+router.post("/", create);
+router.get("/", list);
+router.get("/:id", getOne);
+router.put("/:id", update);
+router.delete("/:id", remove);
 
 export default router;

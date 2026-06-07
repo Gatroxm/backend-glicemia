@@ -4,6 +4,9 @@ import { generateExcel } from "./reportes.controller";
 
 const router = Router();
 
-router.get("/glicemias/excel", auth, generateExcel);
+router.use(auth);
+
+
+router.get("/glicemias/excel", generateExcel);
 
 export default router;
